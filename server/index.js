@@ -1,21 +1,23 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 const { calculateProfile } = require('./scoringEngine');
 const scenarios = require('./scenarios.json');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
 
-// Serve built React app in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
+// Serve built React app whenever client/dist exists (production builds)
+const distDir = path.join(__dirname, '../client/dist');
+const hasClient = fs.existsSync(distDir);
+if (hasClient) {
+  app.use(express.static(distDir));
 }
 
-// Return scenarios without internal scores so clients cannot cheat
+// API — scenarios (scores stripped so clients cannot reverse-engineer results)
 app.get('/api/scenarios', (req, res) => {
   const sanitized = scenarios.map((s) => ({
     id: s.id,
@@ -31,7 +33,7 @@ app.get('/api/scenarios', (req, res) => {
   res.json(sanitized);
 });
 
-// Accept an array of { scenarioId, choiceId } and return the philosophy profile
+// API — scoring
 app.post('/api/score', (req, res) => {
   const { answers } = req.body;
   if (!Array.isArray(answers) || answers.length === 0) {
@@ -41,30 +43,16 @@ app.post('/api/score', (req, res) => {
   res.json(result);
 });
 
-// Catch-all sends the React app for any non-API route in production
-if (process.env.NODE_ENV === 'production') {
+// Catch-all: return the React shell for any non-API route (client-side routing)
+if (hasClient) {
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    res.sendFile(path.join(distDir, 'index.html'));
   });
 }
 
-function startServer(port) {
-  const server = app.listen(port, () => {
-    console.log(`\n  Philosophy Mirror`);
-    console.log(`  Server: http://localhost:${port}`);
-    console.log(`  Mode:   ${process.env.NODE_ENV || 'development'}\n`);
-  });
-
-  server.on('error', (err) => {
-    if (err.code === 'EADDRINUSE') {
-      console.warn(`  Port ${port} is in use, trying ${port + 1}...`);
-      server.close();
-      startServer(port + 1);
-    } else {
-      console.error('  Server error:', err.message);
-      process.exit(1);
-    }
-  });
-}
-
-startServer(Number(process.env.PORT || 3001));
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`\n  Philosophy Mirror`);
+  console.log(`  Listening on port ${PORT}`);
+  console.log(`  Frontend: ${hasClient ? 'served from client/dist' : 'not built'}\n`);
+});

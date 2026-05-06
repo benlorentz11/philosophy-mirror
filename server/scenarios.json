@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "title": "The Shadow World",
+    "source": "Plato — Allegory of the Cave",
+    "question": "You have spent your entire life in an underground cave, watching shadows flicker on the wall. You believe the shadows are real — they are all you have ever known. One day your chains fall away. The mouth of the cave glows faintly in the distance. Climbing toward it means leaving the only world you know. Staying means remaining in the dark.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Climb toward the light — truth is worth the pain of leaving the familiar behind",
+        "themes": ["truth", "freedom"],
+        "feedback": "Plato's prisoner who ascends is blinded at first, then slowly sees the sun — the Form of the Good. Your choice mirrors his: you accepted that reality is more important than comfort. But Plato notes the philosopher who escapes has a duty to return. The question that follows is whether you will.",
+        "scores": { "utilitarian": -1, "kantian": 2, "virtue": 3, "existentialist": 4, "stoic": 2 }
+      },
+      {
+        "id": "b",
+        "text": "Climb out — then go back to free the others. Truth brings obligation",
+        "themes": ["truth", "duty", "social belonging"],
+        "feedback": "This is the philosopher-king's path in Plato's Republic. The one who sees the sun has an obligation to return to the cave and guide others — even when they resist, even when they threaten to kill those who try to free them. Duty and truth are inseparable.",
+        "scores": { "utilitarian": 3, "kantian": 4, "virtue": 4, "existentialist": 2, "stoic": 2 }
+      },
+      {
+        "id": "c",
+        "text": "Stay — the shadows are your reality. Abandoning them gains nothing certain",
+        "themes": ["social belonging"],
+        "feedback": "Plato describes the prisoners who stay as mistaking appearance for reality and punishing those who claim otherwise. The cave is comfortable precisely because it is familiar. But Plato's point is that comfort and truth are not the same thing — and confusing them is the source of profound error.",
+        "scores": { "utilitarian": 1, "kantian": -2, "virtue": -3, "existentialist": -2, "stoic": -1 }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "The Examined Life",
+    "source": "Plato — Apology",
+    "question": "You are Socrates. Athens has convicted you of impiety and corrupting the youth — charges you consider false. The jury will spare your life if you agree to stop philosophizing publicly. To accept means abandoning your life's work. To refuse means drinking the hemlock.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Refuse — 'The unexamined life is not worth living.' You will not stop, even at the cost of your life",
+        "themes": ["truth", "duty", "freedom"],
+        "feedback": "In the Apology, Socrates tells the jury that he cannot obey their order even to save his life, because the god has commanded him to philosophize. For Socrates, a life that abandons the pursuit of truth is not worth living. Your choice is his: truth is not negotiable.",
+        "scores": { "utilitarian": -1, "kantian": 3, "virtue": 4, "existentialist": 4, "stoic": 4 }
+      },
+      {
+        "id": "b",
+        "text": "Accept their terms — a philosopher who survives can still do good, quietly",
+        "themes": ["duty", "freedom"],
+        "feedback": "Socrates explicitly considers and rejects this path in the Apology. He argues that he cannot live a private life and stop questioning — the god has given him his mission. But the tension is real: a philosopher silenced is alive to think, even if not to speak. Socrates did not find this persuasive.",
+        "scores": { "utilitarian": 3, "kantian": -2, "virtue": -2, "existentialist": -3, "stoic": -1 }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Duty to Law",
+    "source": "Plato — Crito",
+    "question": "You are Socrates, awaiting execution. Your friend Crito has bribed the guards and bought safe passage to Thessaly. He urges you to flee. You have argued your whole life that one must never return injustice for injustice. Breaking the law — even after an unjust verdict — would betray everything you have taught.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Escape — an unjust law forfeits its claim on you; survival is not cowardice",
+        "themes": ["freedom", "justice"],
+        "feedback": "In the Crito, the personified Laws of Athens argue that Socrates has implicitly agreed to abide by their verdicts by living in Athens his entire life. To flee now would break that contract. Socrates ultimately agrees — but the argument is contested. Is the social contract binding even when the state acts unjustly?",
+        "scores": { "utilitarian": 3, "kantian": -1, "virtue": -1, "existentialist": 3, "stoic": -1 }
+      },
+      {
+        "id": "b",
+        "text": "Stay and accept the sentence — to flee is to repay injustice with injustice",
+        "themes": ["duty", "justice"],
+        "feedback": "This is Socrates' actual choice. In the Crito, he accepts the Laws' argument: he has lived under their protection his whole life and now cannot abandon the agreement when it costs him. Some philosophers find this too deferential to state authority; others see it as the highest expression of principled duty.",
+        "scores": { "utilitarian": -1, "kantian": 4, "virtue": 3, "existentialist": 0, "stoic": 4 }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "What Death Teaches Us",
+    "source": "Plato — Phaedo",
+    "question": "You sit with Socrates in his final hours. He urges you not to weep. Philosophy, he says, is the practice of separating the soul from the body's distractions — and death simply completes that process. He offers arguments that the soul is immortal and will pass to a purer reality. You must decide: do you believe him?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "I believe him — reason can demonstrate that the soul outlasts the body; death is a transition, not an ending",
+        "themes": ["truth", "identity"],
+        "feedback": "Plato offers several arguments in the Phaedo — the argument from opposites, the argument from recollection, the argument from affinity. Socrates stakes his life on them. To accept them is to believe that genuine knowledge is knowledge of the soul, and that the philosopher's life is already, in part, a practice of dying.",
+        "scores": { "utilitarian": 0, "kantian": 3, "virtue": 2, "existentialist": -1, "stoic": 3 }
+      },
+      {
+        "id": "b",
+        "text": "I am not persuaded — honest uncertainty is more dignified than false comfort",
+        "themes": ["truth"],
+        "feedback": "Simmias and Cebes in the Phaedo raise exactly this objection — and Socrates respects them for it. The Phaedo does not pretend the arguments are airtight. An existentialist would add: confronting death without the comfort of immortality is the more authentic act, because it refuses to soften what cannot be softened.",
+        "scores": { "utilitarian": 1, "kantian": 1, "virtue": 1, "existentialist": 4, "stoic": 2 }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "What Makes It Good?",
+    "source": "Plato — Euthyphro",
+    "question": "Socrates asks Euthyphro: Is something holy because the gods love it — or do the gods love it because it is holy? Behind this ancient question lives a modern one: Is morality created by authority — divine, legal, or social — or does moral truth exist independently of any authority? Where does your sense of right and wrong actually come from?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Authority determines morality — without divine command or social law, 'right' and 'wrong' have no foundation",
+        "themes": ["duty", "justice"],
+        "feedback": "This is the position Socrates dismantles in the Euthyphro. If something is good only because God commands it, then morality is arbitrary — God could command cruelty and it would become good. Socrates argues this reduces ethics to power, not reason. The dilemma has never been fully resolved.",
+        "scores": { "utilitarian": 0, "kantian": -2, "virtue": -1, "existentialist": -2, "stoic": 1 }
+      },
+      {
+        "id": "b",
+        "text": "Moral truth is independent — even God commands what is good because it is already good; reason, not command, is the source of ethics",
+        "themes": ["truth", "justice"],
+        "feedback": "This is where the Euthyphro leads. If something is good independent of divine approval, then ethics is accessible through reason — not just obedience. Plato believed moral Forms exist objectively, and philosophy is how we come to know them. Kant would later ground this in practical reason alone.",
+        "scores": { "utilitarian": 2, "kantian": 4, "virtue": 3, "existentialist": 3, "stoic": 3 }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "The Uncertain Table",
+    "source": "Bertrand Russell — Appearance vs. Reality",
+    "question": "You are sitting at a wooden table. Bertrand Russell asks you: What do you actually know about it? The color changes with the light. The texture changes with the pressure of your fingers. The shape shifts with your angle of view. What you perceive is your perception — not the table itself. Can you trust your senses? Or is reality something your mind can never directly reach?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Trust your senses — perception is the only reality I have access to, and demanding more is an impossible standard",
+        "themes": ["truth"],
+        "feedback": "Russell takes this position seriously — he doesn't dismiss the senses — but he argues that what the senses give us are sense-data, not objects. The 'real' table, the physical object that causes our sensations, may never be directly known. Trusting appearances is practical, but Russell calls it naive realism.",
+        "scores": { "utilitarian": 3, "kantian": -1, "virtue": 1, "existentialist": 2, "stoic": 3 }
+      },
+      {
+        "id": "b",
+        "text": "Look past appearances — real knowledge requires distinguishing what we perceive from what genuinely exists",
+        "themes": ["truth"],
+        "feedback": "Russell's own view is that matter — the physical world — probably exists, but we can only know it through inference from our sense-data. This is why philosophy matters: it keeps us humble about the gap between appearance and reality, and vigilant against mistaking familiar habits for genuine knowledge.",
+        "scores": { "utilitarian": -1, "kantian": 3, "virtue": 2, "existentialist": 3, "stoic": 2 }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "To Stay or Be Uprooted",
+    "source": "Simone Weil — The Need for Roots",
+    "question": "Your small hometown is in slow economic decline. A well-paying remote job in a distant city could transform your finances and career. But Simone Weil wrote that uprootedness is the most dangerous disease of modern life — that human beings need living connection to a community, a past, and a place. Your elderly neighbors, local traditions, and the people who shaped you are still here.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Take the job — individual opportunity matters, and roots can be put down elsewhere",
+        "themes": ["freedom", "identity"],
+        "feedback": "Modern liberalism treats mobility as freedom. But Weil argues in The Need for Roots that uprooted individuals — cut from history, community, and place — become psychologically starved in ways that make them vulnerable to totalitarianism and mass manipulation. New roots are not the same as the roots you are severing.",
+        "scores": { "utilitarian": 3, "kantian": 0, "virtue": -1, "existentialist": 3, "stoic": 1 }
+      },
+      {
+        "id": "b",
+        "text": "Stay — rootedness in community is a fundamental human need; abandoning it leaves a wound nothing else fills",
+        "themes": ["social belonging", "identity"],
+        "feedback": "Weil saw rootedness not as sentimentalism but as a basic human obligation — to the past, to the living community, and to what connects generations. For her, the moral crisis of modernity was precisely the systematic destruction of these roots by industrial capitalism and political uprooting. Staying is an act of resistance.",
+        "scores": { "utilitarian": 1, "kantian": 2, "virtue": 3, "existentialist": -1, "stoic": 3 }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Who Does Feminism Serve?",
+    "source": "bell hooks — Feminism is for Everybody",
+    "question": "You are organizing a feminist campaign in your city. Half your coalition wants to focus entirely on abortion rights — urgent, focused, and winnable. The other half, citing bell hooks, argues that a feminism ignoring race, class, and LGBTQ+ rights reproduces the same hierarchies it claims to fight. You must choose a direction.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Focus the campaign — a narrow agenda is more effective; winning on the core issue matters most",
+        "themes": ["justice", "social belonging"],
+        "feedback": "hooks argues explicitly against this logic in Feminism is for Everybody. A feminism that serves only some women — particularly white middle-class women — is not liberation; it is the redistribution of privilege. Narrowing the agenda may win a battle but leaves intact the systems that create domination in the first place.",
+        "scores": { "utilitarian": 3, "kantian": -1, "virtue": -1, "existentialist": 1, "stoic": 1 }
+      },
+      {
+        "id": "b",
+        "text": "Embrace an intersectional agenda — feminism that ignores race, class, and sexuality is not liberation for everybody",
+        "themes": ["justice", "identity", "social belonging"],
+        "feedback": "This is hooks' central argument. She insists that feminism must be 'for everybody' — not as a slogan but as a structural commitment. Patriarchy, racism, and capitalism are interlocking systems, and dismantling one while ignoring the others leaves the foundations of domination intact. Solidarity must be built across difference.",
+        "scores": { "utilitarian": 1, "kantian": 3, "virtue": 3, "existentialist": 2, "stoic": 1 }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "The Mask You Were Given",
+    "source": "Being a Boy — gender and identity",
+    "question": "You were raised to be a certain kind of boy: stoic, competitive, emotionally controlled. You performed that role well enough to survive adolescence. Now you realize the performance has cost you something real — genuine friendships, emotional honesty, the ability to know who you actually are. The mask fits. But it is not your face.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Keep wearing it — social expectations are real, and authenticity is a luxury not everyone can afford",
+        "themes": ["identity", "social belonging"],
+        "feedback": "This is the pragmatist position — and it is not without weight. Masculine performance is often enforced through real social punishment: ridicule, exclusion, violence. But the cost of wearing the mask is not zero either. Over time, the performance shapes the person, and the gap between mask and face can become unbridgeable.",
+        "scores": { "utilitarian": 2, "kantian": -1, "virtue": -2, "existentialist": -3, "stoic": 2 }
+      },
+      {
+        "id": "b",
+        "text": "Take it off — you cannot build an authentic life on a performance; you have to find out who you really are",
+        "themes": ["identity", "freedom"],
+        "feedback": "Existentialists argue that bad faith — performing a role rather than choosing your own values — is a form of self-betrayal. But gender theorists add a structural dimension: the mask is not chosen, it is imposed. Removing it is not simply a personal act of courage; it is a challenge to norms that police everybody's behavior.",
+        "scores": { "utilitarian": 0, "kantian": 2, "virtue": 3, "existentialist": 4, "stoic": 1 }
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Knowledge and Its Price",
+    "source": "Francis Bacon — The New Atlantis",
+    "question": "Your research team has discovered a gene therapy that could eliminate hereditary disease for millions of people. But testing it requires trials on isolated populations who cannot give meaningful consent. Francis Bacon envisioned Salomon's House — a society of scientist-priests gathering all knowledge for humanity's benefit. How far does that authority extend?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Proceed — the scale of benefit justifies the transgression; future generations will thank us",
+        "themes": ["technology", "justice", "duty"],
+        "feedback": "Bacon's New Atlantis imagines scientists with near-divine authority, operating in secrecy for the public good. The researchers of Salomon's House choose which discoveries to share and which to withhold. But this is exactly the logic that has justified historical medical atrocities — authority plus good intentions does not equal consent.",
+        "scores": { "utilitarian": 4, "kantian": -3, "virtue": -2, "existentialist": -1, "stoic": -1 }
+      },
+      {
+        "id": "b",
+        "text": "Stop — knowledge obtained through exploitation is corrupted at its source; the ends do not sanctify the means",
+        "themes": ["justice", "duty", "technology"],
+        "feedback": "Bacon's utopia assumed that scientific authority could be trusted absolutely — a premise that has not survived contact with history. Real scientific ethics requires that the people who bear the risks of research also bear a voice in it. The knowledge you seek is not worth what it requires.",
+        "scores": { "utilitarian": -1, "kantian": 4, "virtue": 3, "existentialist": 2, "stoic": 3 }
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Life Without the Machine",
+    "source": "E.M. Forster — The Machine Stops",
+    "question": "You have spent your entire life in a subterranean pod, connected to a global network that supplies your every need: ideas, warmth, music, food, human contact — all mediated through the Machine. You have never touched soil. You have never breathed outdoor air. You have never met another person directly. Now the Machine is failing. You can wait for repair, or climb to the surface.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Wait — the Machine has always recovered; the world above is unknown and the system will stabilize",
+        "themes": ["technology", "freedom"],
+        "feedback": "Forster's story shows what this choice looks like: Vashti, the protagonist's mother, cannot conceive of life outside the Machine. When it begins to fail, she is incapable of imagining anything beyond it. Her comfort has become indistinguishable from captivity. The Machine Stops is Forster's warning about what total technological mediation costs.",
+        "scores": { "utilitarian": 2, "kantian": -1, "virtue": -3, "existentialist": -3, "stoic": -2 }
+      },
+      {
+        "id": "b",
+        "text": "Climb to the surface — you have traded real experience for mediated comfort long enough; whatever is up there is more real than this",
+        "themes": ["freedom", "truth", "technology"],
+        "feedback": "Kuno, Forster's hero, makes this choice. He risks everything to touch the earth — and is punished for it. When the Machine finally stops, Kuno is the one who knows how to survive. Forster believed that direct human experience — touch, breath, physical reality — cannot be replaced by any technology without something essential being lost.",
+        "scores": { "utilitarian": -1, "kantian": 2, "virtue": 4, "existentialist": 4, "stoic": 3 }
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "The Edge of the Set",
+    "source": "The Truman Show — constructed reality and freedom",
+    "question": "You have slowly realized that your life is staged. Your town, your friends, your marriage are props in a live television broadcast watched by millions. The sky is a dome. The ocean has an edge. You can keep living as if you don't know — what you have built here still feels real — or you can sail toward the horizon and push through the wall.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Keep living normally — what you have built here is real to you, even if it was constructed; it is still your life",
+        "themes": ["identity", "truth"],
+        "feedback": "There is something genuine in this choice: relationships built inside a constructed world are still relationships. But Plato's cave teaches us to question this comfort. The prisoner who returns to the shadows and chooses not to see is not at peace — they are simply back in chains. And Truman's world was built to keep him there for someone else's profit.",
+        "scores": { "utilitarian": 2, "kantian": -2, "virtue": -1, "existentialist": -3, "stoic": 2 }
+      },
+      {
+        "id": "b",
+        "text": "Sail through the wall — a life you did not choose, watched by strangers, is not your life; even the unknown is more authentic than a managed reality",
+        "themes": ["freedom", "truth", "identity"],
+        "feedback": "Truman's walk through the wall is one of the most resonant images in contemporary film — a Platonic ascent out of the cave into real light. The existentialist would say: authentic existence requires choosing your own life, not performing the one designed for you. Whatever waits beyond the door, it is at least genuinely yours.",
+        "scores": { "utilitarian": 0, "kantian": 3, "virtue": 3, "existentialist": 4, "stoic": 2 }
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Your Score Is Dropping",
+    "source": "Black Mirror — AI, gamification, and social control",
+    "question": "Every social interaction in your city is rated, and your score determines where you live, who hires you, and who can speak to you. Your childhood friend has a dangerously low score — not because they are a bad person, but because they once publicly disagreed with someone powerful. They ask you to defend them. Every person who sides with them risks losing points.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Defend them publicly — justice requires accepting personal risk; a system that punishes solidarity is illegitimate",
+        "themes": ["justice", "social belonging", "duty"],
+        "feedback": "Black Mirror uses gamification to show how social technology can enforce conformity more effectively than any law. A system where defending a friend costs you points is a system designed to atomize people and dissolve solidarity. To defend them anyway is to insist that some obligations are not subject to algorithmic cost-benefit analysis.",
+        "scores": { "utilitarian": 0, "kantian": 4, "virtue": 4, "existentialist": 3, "stoic": 3 }
+      },
+      {
+        "id": "b",
+        "text": "Help privately but say nothing publicly — you can support them without surrendering your own position",
+        "themes": ["justice", "duty"],
+        "feedback": "Private loyalty while maintaining public silence is the path most people take — and the system is designed to produce exactly this outcome. The rating system doesn't need to silence anyone directly; it just needs to make solidarity costly enough that most people choose the private option. The question is what kind of community that choice produces.",
+        "scores": { "utilitarian": 3, "kantian": 0, "virtue": -1, "existentialist": 0, "stoic": 1 }
+      },
+      {
+        "id": "c",
+        "text": "Do nothing — the system's risks are real; breaking rank won't fix the system and will only hurt you both",
+        "themes": ["social belonging"],
+        "feedback": "This is the logic the system runs on. Black Mirror shows that totalitarian social control does not require a dictator — it only requires that enough ordinary people decide the risk is not worth it. Hannah Arendt called this the 'banality of evil': not malice, but ordinary self-preservation in the face of an unjust system.",
+        "scores": { "utilitarian": -1, "kantian": -3, "virtue": -3, "existentialist": -2, "stoic": 0 }
+      }
+    ]
+  }
+]

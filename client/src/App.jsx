@@ -5,12 +5,43 @@ import FeedbackPanel from './components/FeedbackPanel';
 import ResultsPage from './components/ResultsPage';
 import ProgressBar from './components/ProgressBar';
 
+// Descriptions keyed by the single most-chosen theme across answers so far.
+const THEME_PATTERN_NOTES = {
+  truth:
+    'Across your choices so far, you have consistently reached for truth over comfort — even when the honest path was the harder one.',
+  duty:
+    'A thread of obligation runs through your choices. Again and again you have asked: what is owed here, not just what is easy?',
+  freedom:
+    'Freedom and self-determination keep appearing in your choices. You resist being told who to be or what to accept.',
+  justice:
+    'Justice has been your recurring concern. You return to fairness even when pure outcomes or pure principles might point elsewhere.',
+  identity:
+    'Who you are — not who you are expected to be — has shaped your choices. You take the question of self-definition seriously.',
+  technology:
+    'You are attuned to technology\'s moral weight. Across different scenarios, you have sensed what is lost when machines mediate experience.',
+  'social belonging':
+    'Community keeps calling you back. You have chosen connection and obligation to others over purely individual advantage.',
+};
+
+function computePatternNote(chosenThemes, answerCount) {
+  if (answerCount < 2 || chosenThemes.length === 0) return null;
+
+  const counts = {};
+  for (const t of chosenThemes) counts[t] = (counts[t] || 0) + 1;
+
+  const [topTheme, topCount] = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+  if (topCount < 2) return null;
+
+  return THEME_PATTERN_NOTES[topTheme] ?? null;
+}
+
 export default function App() {
   const [phase, setPhase] = useState('landing');
   const [userName, setUserName] = useState('');
   const [scenarios, setScenarios] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [chosenThemes, setChosenThemes] = useState([]);
   const [lastChoice, setLastChoice] = useState(null);
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -32,12 +63,14 @@ export default function App() {
     const scenario = scenarios.find((s) => s.id === scenarioId);
     const choice = scenario.choices.find((c) => c.id === choiceId);
     setAnswers((prev) => [...prev, { scenarioId, choiceId }]);
+    setChosenThemes((prev) => [...prev, ...(choice.themes || [])]);
     setLastChoice(choice);
     setPhase('feedback');
   };
 
   const handleContinue = async () => {
-    const isLast = currentIndex + 1 >= scenarios.length;
+    const nextIndex = currentIndex + 1;
+    const isLast = nextIndex >= scenarios.length;
     if (isLast) {
       setLoading(true);
       try {
@@ -56,7 +89,7 @@ export default function App() {
         setLoading(false);
       }
     } else {
-      setCurrentIndex((i) => i + 1);
+      setCurrentIndex(nextIndex);
       setPhase('scenario');
     }
   };
@@ -66,6 +99,7 @@ export default function App() {
     setUserName('');
     setCurrentIndex(0);
     setAnswers([]);
+    setChosenThemes([]);
     setLastChoice(null);
     setResults(null);
     setError(null);
@@ -87,6 +121,8 @@ export default function App() {
     );
   }
 
+  const patternNote = computePatternNote(chosenThemes, answers.length);
+
   return (
     <div className="min-h-screen">
       {phase === 'landing' && (
@@ -107,6 +143,7 @@ export default function App() {
               <FeedbackPanel
                 choice={lastChoice}
                 scenario={scenarios[currentIndex]}
+                patternNote={patternNote}
                 onContinue={handleContinue}
                 isLast={currentIndex + 1 >= scenarios.length}
                 loading={loading}

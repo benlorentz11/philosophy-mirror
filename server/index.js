@@ -28,6 +28,7 @@ app.get('/api/scenarios', (req, res) => {
       id: c.id,
       text: c.text,
       feedback: c.feedback,
+      themes: c.themes || [],
     })),
   }));
   res.json(sanitized);

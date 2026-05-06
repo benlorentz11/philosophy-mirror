@@ -1,7 +1,7 @@
-export default function FeedbackPanel({ choice, scenario, onContinue, isLast, loading }) {
+export default function FeedbackPanel({ choice, scenario, patternNote, onContinue, isLast, loading }) {
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
-      <div className="max-w-2xl w-full space-y-8">
+      <div className="max-w-2xl w-full space-y-7">
 
         {/* Source echo */}
         {scenario?.source && (
@@ -26,15 +26,27 @@ export default function FeedbackPanel({ choice, scenario, onContinue, isLast, lo
         </div>
 
         {/* Philosophical reflection */}
-        <div className="bg-gray-900/70 rounded-2xl p-7 border border-gray-800/80 space-y-3 animate-fade-up anim-delay-150">
+        <div className="bg-gray-900/70 rounded-2xl p-6 border border-gray-800/80 space-y-3 animate-fade-up anim-delay-150">
           <div className="flex items-center gap-2">
             <div className="w-3 h-px bg-amber-700/60" />
             <p className="text-amber-700 text-xs uppercase tracking-widest font-semibold">
               Philosophical reflection
             </p>
           </div>
-          <p className="text-gray-300 leading-relaxed text-base">{choice.feedback}</p>
+          <p className="text-gray-300 leading-relaxed text-sm">{choice.feedback}</p>
         </div>
+
+        {/* Live pattern note — appears once a theme repeats across 2+ answers */}
+        {patternNote && (
+          <div className="rounded-xl border border-amber-900/30 bg-amber-950/20 px-6 py-4 space-y-1.5 animate-fade-up anim-delay-300">
+            <p className="text-amber-600 text-xs uppercase tracking-widest font-semibold">
+              Pattern forming
+            </p>
+            <p className="text-amber-200/70 text-sm leading-relaxed italic">
+              {patternNote}
+            </p>
+          </div>
+        )}
 
         {/* Continue */}
         <button
